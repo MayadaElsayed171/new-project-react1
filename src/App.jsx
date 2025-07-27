@@ -10,7 +10,7 @@ import "./App.css";
 function App() {
   const router = createBrowserRouter([
     {
-      path: "",
+      path: "/new-project-react/",
       element: <Layout />,
       children: [
         {
@@ -18,15 +18,15 @@ function App() {
           element: <Home />,
         },
         {
-          path: "about",
+          path: "/new-project-react/about",
           element: <About />,
         },
         {
-          path: "portfolio",
+          path: "/new-project-react/portfolio",
           element: <Portfolio />,
         },
         {
-          path: "contact",
+          path: "/new-project-react/contact",
           element: <Contact />,
         },
       ],
