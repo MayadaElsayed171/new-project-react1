@@ -1,5 +1,5 @@
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -8,9 +8,9 @@ import Contact from "./pages/contact";
 import "./App.css";
 
 function App() {
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
-      path: "/new-project-react/",
+      path: "/",
       element: <Layout />,
       children: [
         {
@@ -18,15 +18,15 @@ function App() {
           element: <Home />,
         },
         {
-          path: "/new-project-react/about",
+          path: "about",
           element: <About />,
         },
         {
-          path: "/new-project-react/portfolio",
+          path: "portfolio",
           element: <Portfolio />,
         },
         {
-          path: "/new-project-react/contact",
+          path: "contact",
           element: <Contact />,
         },
       ],
