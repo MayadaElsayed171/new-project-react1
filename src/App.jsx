@@ -1,21 +1,39 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Portfolio from "./pages/portfolio";
 import Contact from "./pages/contact";
+import "./App.css";
 
 function App() {
-  return (
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="portfolio" element={<Portfolio />} />
-          <Route path="contact" element={<Contact />} />
-        </Route>
-      </Routes>
-    </HashRouter>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "",
+      element: <Layout />,
+      children: [
+        {
+          index: true, 
+          element: <Home />,
+        },
+        {
+          path: "about",
+          element: <About />,
+        },
+        {
+          path: "portfolio",
+          element: <Portfolio />,
+        },
+        {
+          path: "contact",
+          element: <Contact />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
+
+export default App;
