@@ -2,7 +2,7 @@ import port1 from '../img/poert1.png';
 import port2 from '../img/port2.png';
 import port3 from '../img/port3.png';
 
-import './Portfolio.css';
+import './portfolio.css';
 
 export default function Portfolio() {
   return (
