@@ -2,7 +2,7 @@
   "name": "project1",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://MayadaElsayed171.github.io/new-project-react",
+  "homepage": "https://MayadaElsayed171.github.io/new-project-react1",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
