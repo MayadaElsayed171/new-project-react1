@@ -1,4 +1,4 @@
-import "./Home.css";
+import "./home.css";
 import avatar from "../img/avataaars.svg";
 
 export default function Home() {
